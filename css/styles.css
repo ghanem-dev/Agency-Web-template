@@ -2,7 +2,7 @@
 
 :root {
     --main-color: #16c0c0;
-    --seconde-color: #2c4856;
+    --secondary-color: #2c4856;
 }
 
 /* Global box-sizing */
@@ -36,6 +36,45 @@
     .container {
         width: 1170px;
     }
+}
+
+/*Styling The sections titles (Big titles)*/
+/* The title */
+.section-title div {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-size: 100px;
+    font-weight: 800;
+    color: #e1e1e1;
+    letter-spacing: -2px;
+
+}
+
+/* The Qoute */
+.section-title p.qoute {
+    margin: -50px 0 0;
+    font-size: 18px;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+/* responsive title */
+@media (max-width: 768px) {
+    .section-title p.qoute {
+        font-size: 15px;
+    }
+
+    .section-title div {
+        font-size: 70px;
+    }
+
+}
+
+/* ------------------------ */
+
+html {
+    scroll-behavior: smooth;
 }
 
 /*FONTS*/
@@ -72,7 +111,7 @@ header .icon {
 /* Menu bars */
 header .icon .icon-bar {
     display: block;
-    background-color: var(--seconde-color);
+    background-color: var(--secondary-color);
     height: 2px;
     width: 100%;
     transition: 0.3s ease-in-out;
@@ -113,7 +152,7 @@ header div.links ul {
     margin: 0;
     padding: 0;
     min-width: 200px;
-    background-color: var(--seconde-color);
+    background-color: var(--secondary-color);
     position: absolute;
     right: 0;
     top: calc(100% + 20px);
@@ -129,7 +168,7 @@ header .links:hover ul {
 /*small triangle for Menu backround*/
 header div.links div.dialog-mark {
     border: 10px solid;
-    border-color: transparent transparent var(--seconde-color) transparent;
+    border-color: transparent transparent var(--secondary-color) transparent;
     position: absolute;
     right: 5px;
     display: none;
@@ -192,8 +231,10 @@ section .landing .hero-text p {
 .features-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding: 20px;
     text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
 }
 
 
@@ -216,7 +257,7 @@ section .landing .hero-text p {
 /*fatures h3*/
 .features-section div h3 {
     font-weight: 800;
-    color: var(--seconde-color);
+    color: var(--secondary-color);
 }
 
 /*features paragraph*/
@@ -229,46 +270,9 @@ section .landing .hero-text p {
 
 
 /*Services Section*/
-.services-section .section-title {
-    padding: 20px;
-    position: relative;
-}
-
-.services-section .section-title div.services {
-    text-align: center;
-    font-size: 100px;
-    font-weight: 900;
-    color: #e1e1e1;
-}
-
-.services-section .section-title p.qoute {
-    font-size: 18px;
-    color: var(--seconde-color);
-    position: absolute;
-    right: 41%;
-    top: 50%;
-}
-
-@media (max-width: 768px) {
-    .services-section .section-title p.qoute {
-        right: 37%;
-        font-size: 15px;
-    }
-
-    .services-section .section-title div.services {
-        font-size: 70px;
-    }
-
-}
-
-@media (max-width: 430px) {
-    .services-section .section-title p.qoute {
-        right: 25%;
-    }
-
-    .services-section .section-title div.services {
-        font-size: 70px;
-    }
+.services-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .services-section .container {
@@ -296,7 +300,7 @@ section .landing .hero-text p {
 
 .services-section .container div h3 {
     font-weight: 800;
-    color: var(--seconde-color);
+    color: var(--secondary-color);
 }
 
 .services-section .container div p {
@@ -314,7 +318,7 @@ section .landing .hero-text p {
     position: absolute;
     width: 70px;
     height: 90%;
-    background-color: var(--seconde-color);
+    background-color: var(--secondary-color);
     right: 5px;
 }
 
@@ -322,90 +326,231 @@ section .landing .hero-text p {
     position: absolute;
     width: 220px;
     height: 50%;
-    background-color: #e1e1e1;
     right: 43px;
-    top: 218px;
+    top: 274px;
+}
+
+/* changing the small photo to a grey background */
+@media (min-width: 591px) {
+    .services-section .container div.rectangle-2 {
+        background-image: url(../images/small-color-mountain.jpg);
+        background-size: cover;
+    }
+}
+
+@media (max-width: 590px) {
+    .services-section .container div.rectangle-2 {
+        background-color: #e1e1e1;
+    }
 }
 
 /* PORTFOLIO SECTION */
 .portfolio-section {
     background-color: #eee;
+    padding-top: 60px;
+    padding-bottom 60px;
 }
 
 /*PORTFOLIO TITLE*/
-.portfolio-section .section-title {
-    padding: 20px;
-    position: relative;
-}
-
-.portfolio-section .section-title div.portfolio {
-    text-align: center;
-    font-size: 100px;
-    font-weight: 900;
-    color: #e1e1e1;
-}
-
-/* TITLE QOUTE */
-.portfolio-section .section-title p.qoute {
-    font-size: 18px;
-    color: var(--seconde-color);
-    position: absolute;
-    right: 38%;
-    top: 50%;
-}
-
-/* RESPONSIVE PORTFOLIO TITLE */
-@media (max-width: 768px) {
-    .portfolio-section .section-title p.qoute {
-        right: 32%;
-        font-size: 15px;
-    }
-
-    .portfolio-section .section-title div.portfolio {
-        font-size: 70px;
-    }
-}
-
-@media (max-width: 430px) {
-    .portfolio-section .section-title p.qoute {
-        right: 15%;
-    }
-}
 
 /* DISPLAY PORTFOLIO PROJECTS WITH GRID  */
 .portfolio-section .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding: 60px;
     gap: 20px;
+    padding: 50px;
 }
 
 /* RESPONSIVE COLUMNS FOR PROJECTS */
 @media (max-width: 1059px) {
     .portfolio-section .projects-container {
         grid-template-columns: auto;
+        gap: 50px;
     }
 }
 
-/* PROJECTS IMAGES */
-.portfolio-section .projects-container .project-1-image {
-    background-image: url(../images/project-1.png);
-    background-size: cover;
-    height: 330px;
+/* PROJECTS IMAGES + TEXT */
+.portfolio-section .projects-container .card {
+    background-color: white;
+}
+
+.portfolio-section .projects-container .card img {
     max-width: 100%;
 }
 
-.portfolio-section .projects-container .project-2-image {
-    background-image: url(../images/project-2.jpg);
-    background-size: cover;
-    height: 330px;
-    max-width: 100%;
+
+.portfolio-section .card .project-text {
+    padding: 20px;
+}
+
+.portfolio-section .card h3 {
+    margin: 0;
+}
+
+.portfolio-section .card p {
+    margin-bottom: 0;
+    line-height: 1.6;
+    color: #777;
+}
+
+/* ABOUT SECTION */
+.about-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.about-section .about-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 
 }
 
-.portfolio-section .projects-container .project-3-image {
-    background-image: url(../images/project-3.jpg);
-    background-size: cover;
-    height: 330px;
-    max-width: 100%;
+@media (max-width: 992px) {
+    .about-section .about-content {
+        flex-direction: column;
+        margin-top: 100px;
+    }
+}
+
+.about-section .about-section-image {
+    position: relative;
+}
+
+.about-section .about-section-image img {
+    width: 200px;
+    height: 235px;
+}
+
+/* Shape Before About Image */
+.about-section .about-section-image::before {
+    content: '';
+    background-color: #e1e1e1;
+    width: 70px;
+    height: calc(100% + 80px);
+    position: absolute;
+    z-index: -1;
+    top: -40px;
+    left: -10px;
+
+
+}
+
+/* Shape After About Image */
+.about-section .about-section-image::after {
+    content: '';
+    width: 50px;
+    height: 150px;
+    border-left: 60px solid var(--main-color);
+    border-bottom: 60px solid var(--main-color);
+    position: absolute;
+    z-index: -1;
+    top: -20px;
+    right: -80px;
+}
+
+.about-section .about-paragraphs {
+    flex-basis: 445px;
+    padding: 60px 35px;
+}
+
+.about-section .about-paragraphs p {
+    line-height: 1.8;
+}
+
+.about-section .about-paragraphs p:first-of-type {
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.about-section .about-paragraphs hr {
+    width: 50%;
+    margin: 0;
+    border-color: var(--main-color);
+}
+
+.about-section .about-paragraphs p:last-of-type {
+    color: #777;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #eee;
+}
+
+.contact-section .contact-content {
+    width: 70%;
+    text-align: center;
+    margin: 55px 0;
+}
+
+.contact-section .contact-content h2, .contact-content a{
+    font-weight: 900;
+    font-size: 35px;
+    letter-spacing: -1px;
+    margin: 0 0 15px;
+}
+
+.contact-section .contact-content h2 {
+    color: var(--secondary-color);
+}
+
+/* Email Link Styling */
+.contact-section .contact-content a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+/* P inline with the icons */
+.contact-section .social-networks p, div.social-icons {
+    display: inline-block;
+}
+
+/* Space Between the Icons */
+.contact-section .social-networks div.social-icons i {
+    margin-left: 5px;
+    color: var(--secondary-color);
+}
+
+.contact-section .social-networks p {
+    font-size: 12px;
+}
+
+/* FOOTER STYLING */
+footer {
+    background-color: var(--secondary-color);
+}
+
+footer p {
+    padding: 30px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+}
+
+/* 2023 color */
+footer p span {
+    color: var(--main-color);
+}
+
+/* responsive contact section + Footer */
+@media (max-width: 689px) {
+    .contact-section .contact-content h2, .contact-content a {
+        font-weight: 900;
+        font-size: 19px;
+    }
+
+    .contact-section .social-networks p {
+        font-size: 10px;
+    }
+
+    .contact-section .contact-content {
+        width: 100%;
+    }
 }
